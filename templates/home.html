@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome to the Management System</h2>
+<p>Manage the following:</p>
+<ul>
+    <li><a href="{% url 'user_list' %}">Users</a></li>
+    <li><a href="{% url 'client_list' %}">Clients</a></li>
+    <li><a href="{% url 'project_list' %}">Projects</a></li>
+    <a href="{% url 'login' %}?next={% url 'add_client' %}">Add Client</a>
+
+</ul>
+{% endblock %}

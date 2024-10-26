@@ -1,0 +1,21 @@
+<!-- edit_user.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+</head>
+<body>
+    <h1>Edit User Information</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" value="{{ user.username }}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="{{ user.email }}" required>
+
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>

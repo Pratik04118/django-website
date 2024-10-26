@@ -1,0 +1,11 @@
+<h2>Login</h2>
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+<form method="post" action="{% url 'login' %}?next={{ request.GET.next }}">
+    {% csrf_token %}
+    <input type="text" name="username" required>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+
